@@ -18,10 +18,10 @@ Repositorio de práctica con ejemplos básicos de **HTML + PHP**:
    - `http://localhost/Practica-2-de-DS7/ejemplo3.php`
 
 ## Archivos y qué hacen
-- **aechivohtmlp.html**  
-  Formulario que envía `nombre` y `edad` por `POST` a `EjemplosResueltos.php`.
+- **ejemplo1.html**  
+  Formulario que envía `nombre` y `edad` por `POST` a `ejemplo1.php`.
 
-- **EjemplosResueltos.php**  
+- **ejemplo1.php**  
   Lee `$_POST` y muestra las claves/valores con `foreach`.
 
 - **ejemplo2.html**  
@@ -37,6 +37,6 @@ Repositorio de práctica con ejemplos básicos de **HTML + PHP**:
   Datos usados por `ejemplo3.php` (colores y códigos hex).
 
 ## Flujo (qué llama a qué)
-- `aechivohtmlp.html` → `EjemplosResueltos.php`
+- `ejemplo1.html` → `ejemplo1.php`
 - `ejemplo2.html` → `ejemplo2.php`
 - `ejemplo3.php` → `colores.xml`
