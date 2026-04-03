@@ -1,16 +1,31 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejemplo 1</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="ejemplo1.css" />
   </head>
   <body>
-    <form name="formulario" action="EjemplosResueltos.php" method="post">
-      Intriduce tu nombre: <input type="text" name="nombre" /> Introduce tu
-      edad:
-      <input type="text" name="edad" />
-      <input type="submit" value="enviar" />
-    </form>
+    <main class="wrap">
+      <form name="formulario" action="ejemplo1.php" method="post" id="f">
+        Intriduce tu nombre: <input type="text" name="nombre" /> Introduce tu
+        edad:
+        <input type="text" name="edad" />
+        <input type="submit" value="enviar" />
+      </form>
+
+      <div id="resultado"></div>
+    </main>
+
+    <script>
+      document.getElementById("f").addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const fd = new FormData(e.target);
+
+        const res = await fetch("ejemplo1.php", { method: "POST", body: fd });
+        const html = await res.text(); // el PHP devuelve HTML
+        document.getElementById("resultado").innerHTML = html;
+      });
+    </script>
   </body>
 </html>
