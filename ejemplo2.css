@@ -1,0 +1,53 @@
+/* ejemplo2.css */
+:root{
+  --bg:#0b1020;
+  --panel:#111a34;
+  --text:#e8ecff;
+  --muted:#b5bedf;
+  --accent:#2ee59d;
+  --border:rgba(255,255,255,.12);
+  --shadow:0 16px 44px rgba(0,0,0,.35);
+  --radius:14px;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+html,body{ height:100%; }
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family:var(--sans);
+  background:
+    radial-gradient(900px 540px at 80% 0%, rgba(46,229,157,.22), transparent 60%),
+    linear-gradient(180deg, #070a14, var(--bg));
+  color:var(--text);
+  padding:28px 18px;
+  display:flex;
+  justify-content:center;
+}
+
+main, .wrap{
+  width:min(900px, 100%);
+  background: rgba(17,26,52,.72);
+  border:1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding:18px 18px;
+}
+
+body{
+  line-height:1.7;
+  font-size:16px;
+}
+
+/* Resalta la “posición” que ya va en <strong> */
+strong{
+  color:#08120c;
+  background: rgba(46,229,157,.95);
+  padding:2px 8px;
+  border-radius: 999px;
+  font-weight: 900;
+}
+
+/* Saltos de línea más aireados */
+br{ line-height: 2; }

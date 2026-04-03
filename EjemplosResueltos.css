@@ -1,0 +1,56 @@
+/* EjemplosResueltos.css */
+:root{
+  --bg:#0b1020;
+  --panel:#111a34;
+  --text:#e8ecff;
+  --muted:#b5bedf;
+  --accent:#7c5cff;
+  --border:rgba(255,255,255,.12);
+  --shadow:0 16px 44px rgba(0,0,0,.35);
+  --radius:14px;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+html,body{ height:100%; }
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family:var(--sans);
+  background:
+    radial-gradient(900px 540px at 20% 0%, rgba(124,92,255,.28), transparent 60%),
+    linear-gradient(180deg, #070a14, var(--bg));
+  color:var(--text);
+  padding:28px 18px;
+  display:flex;
+  justify-content:center;
+}
+
+main, .wrap{
+  width:min(900px, 100%);
+  background: rgba(17,26,52,.72);
+  border:1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding:18px 18px;
+}
+
+/* Texto que imprime el PHP (si sale “suelto” en el body) */
+body{
+  line-height:1.65;
+  font-size:16px;
+}
+
+/* Enfatizados */
+strong{
+  color: white;
+  background: rgba(124,92,255,.18);
+  border:1px solid rgba(124,92,255,.35);
+  padding:2px 6px;
+  border-radius: 10px;
+  font-weight: 800;
+}
+
+/* Espaciado agradable para los <br> */
+br{ line-height: 1.8; }
